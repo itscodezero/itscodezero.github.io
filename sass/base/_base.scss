@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Browsers set default root font size to 16px but we want it to be, say 10px but users can also have set different font size which they like from browser settings which is why
+    we need calculate our font size value in percentage so 10/16 = 62.5% so when users changes browser font settings our font size will also increase in proportion. 
+    No the reason to set font size on root is that at all other places we can use rem unit instead of pixels because 1rem=root font size. this makes our css to adapt to any changes in 
+    screen size and they autoscale. this make our website responsive also changing root font size will then automatically scale each element on our desigsn using the rem unit. 
+    Note: rem does not work on IE<=9 */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+ 
