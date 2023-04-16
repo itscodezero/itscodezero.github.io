@@ -1,8 +1,4 @@
 .form {
-    &__group {
-       
-    }
-
     &__input {
         font-size: 1.5rem;
         font-family: inherit;
@@ -16,6 +12,10 @@
         display: block;
         margin-top: 2rem;
         transition: all .3s;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
 
         &:focus:invalid {
              border-bottom: 3px solid $color-secondary-dark;
@@ -51,6 +51,11 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 1rem 0;
+        }
     }
 
     &__radio-input {
