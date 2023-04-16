@@ -670,7 +670,7 @@ body {
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
-  transition: all .5s ease-in; }
+  transition: all 0.5s ease-in; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -681,7 +681,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 75%;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
@@ -690,18 +689,37 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
-    transition: all .4s .2s; }
-  .popup__left {
-    width: 33.333333%;
-    display: table-cell; }
+    transition: all 0.4s 0.2s; }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        display: block; } }
+  @media (max-width: 56.25em) {
+    .popup__left {
+      width: 101%; } }
+  .popup__img {
+    display: block;
+    width: 100%;
+    transform: scale(1); }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        width: 49.8%;
+        display: inline-block;
+        transform: scale(1.1); } }
+    @media (max-width: 37.5em) {
+      .popup__img {
+        width: 49.7%;
+        display: inline-block;
+        transform: scale(1.1); } }
   .popup__right {
     width: 66.66666%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
-  .popup__img {
-    display: block;
-    width: 100%; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        display: block;
+        width: 100%;
+        text-align: center; } }
   .popup__text {
     font-size: 1.4rem;
     -moz-column-count: 2;
@@ -714,6 +732,9 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        text-align: start !important; } }
   .popup__close:link, .popup__close:visited {
     color: #777;
     position: absolute;
@@ -721,7 +742,7 @@ body {
     right: 3rem;
     text-decoration: none;
     display: inline-block;
-    transition: all .2s;
+    transition: all 0.2s;
     font-size: 2rem;
     line-height: 1rem; }
   .popup__close:hover {
