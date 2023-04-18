@@ -12,7 +12,7 @@ html {
     No the reason to set font size on root is that at all other places we can use rem unit instead of pixels because 1rem=root font size. this makes our css to adapt to any changes in 
     screen size and they autoscale. this make our website responsive also changing root font size will then automatically scale each element on our desigsn using the rem unit. 
     Note: rem does not work on IE<=9 */
-  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5px;
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%;
 
   @include respond(tab-land) {
     font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
